@@ -1,3 +1,4 @@
+/*
 //DOM SELECTION
 //document.getElementById()
 const judul = document.getElementById("judul");
@@ -25,3 +26,14 @@ const li2 = document.querySelector('section#b ul li:nth-child(2)')
 li2.style.backgroundColor = "purple"
 li2.style.fontWeight = "bold"
 li2.style.color = "black";
+
+*/
+
+// document.querySelectorAll() -> nodeList
+const p = document.querySelectorAll('p')
+for(let i = 0; i < p.length; i++) {
+    p[i].style.backgroundColor = "salmon"
+    p[i].style.fontWeight = "bold"
+    p[i].style.color = "red"
+
+}
