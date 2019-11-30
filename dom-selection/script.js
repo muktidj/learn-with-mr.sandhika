@@ -30,10 +30,15 @@ li2.style.color = "black";
 */
 
 // document.querySelectorAll() -> nodeList
-const p = document.querySelectorAll('p')
-for(let i = 0; i < p.length; i++) {
-    p[i].style.backgroundColor = "salmon"
-    p[i].style.fontWeight = "bold"
-    p[i].style.color = "red"
+// const p = document.querySelectorAll('p')
+// for(let i = 0; i < p.length; i++) {
+//     p[i].style.backgroundColor = "salmon"
+//     p[i].style.fontWeight = "bold"
+//     p[i].style.color = "red"
 
-}
+// }
+
+// node Root
+const sectionB = document.getElementById('b')
+const p4 = sectionB.querySelector('p')
+p4.style.backgroundColor = "red"
