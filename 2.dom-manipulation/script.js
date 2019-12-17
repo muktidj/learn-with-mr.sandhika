@@ -5,7 +5,8 @@ judul.style.color = "lightgreen";
 judul.setAttribute("name", "MuktiDJ");
 
 const ahref = document.querySelector("section#a a");
-ahref.removeAttribute("href");
+// ahref.removeAttribute("href");
+
 
 const p2 = document.querySelector(".p2");
 p2.classList.add("label");
@@ -45,3 +46,22 @@ ul.insertBefore(newList, insertNewlist)
 newList.classList.add('newlist')
 newList.style.backgroundColor = 'coral'
 newList.style.color = 'white'
+
+// removeChild
+sectionA.removeChild(ahref)
+
+const sectionB = document.getElementById('b')
+const replaceParagraph = sectionB.querySelector('p')
+
+const createH1 = document.createElement('h1')
+const textCreateH1 = document.createTextNode('Hello Uya Onter ')
+
+// appendChild
+createH1.appendChild(textCreateH1)
+
+// replaceChild
+sectionB.replaceChild(createH1, replaceParagraph)
+
+createH1.style.backgroundColor = 'lightblue'
+createH1.style.color = 'black'
+createH1.style.border = '1px solid black'
