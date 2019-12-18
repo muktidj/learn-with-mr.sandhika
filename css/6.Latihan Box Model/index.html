@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/28px;
+            background-color: #eaeaea;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        .header {
+            padding: 20px;
+        }
+
+        .header .judul {
+            font-weight: 600;
+            font-size: 40px;
+        }
+
+        .header ul li {
+            display: block;
+            float: right;
+            margin: 5px;
+
+
+        }
+        .clear {
+             clear: right;
+        }
+
+        .header a {
+            display: inline-block;
+            text-decoration: none;
+            color: sandybrown;
+            font-weight: bolder;
+
+
+        }
+
+        .header a:hover {
+            background-color: sandybrown;
+            color: black;
+            cursor: pointer;
+
+        }
+
+        .gambar {
+            height: 400px;
+            background-image: url(img/mukti.jpg);
+            background-size: cover;
+            background-position: -250px 0;
+            margin-top: -5px;
+            border-bottom: 5px solid aquamarine;
+            border-top: 5px solid aquamarine;
+        }
+
+        .content {
+            padding: 20px;
+
+        }
+
+        .content .penulis {
+            font-size: 11px;
+            margin-bottom: 35px;
+        }
+
+        .content .penulis a {
+            text-decoration: none;
+            font-weight: bold;
+            color: sandybrown;
+        }
+
+        .content .penulis a:hover {
+            cursor: pointer;
+            background-color: sandybrown;
+            color: black;
+        }
+
+        .content .isi {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: black;
+        }
+
+        .footer .copy {
+            color: #eaeaea;
+            text-align: center;
+            padding: 8px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="judul">Box Model</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Product</a></li>
+
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="gambar"></div>
+        <div class="content">
+            <h2>Mukti Perenang Handall</h2>
+            <p class="penulis">Ditulis oleh <a href="www.instagram.com/muktidj">muktidj</a>. Pada 24 November 2019</p>
+
+            <p class="isi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nam dicta asperiores
+                vero
+                reprehenderit explicabo sed a incidunt? Nobis neque nihil nulla amet voluptatem magnam voluptatibus
+                veniam minus provident rerum?</p>
+
+
+
+            <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>
+                    Mukti Adalah Perenang yang jago. konon katanya dia pernah berenang mengarungi Benua Asia 7 hari 7
+                    malem, tamat.
+                </strong>Velit nostrum cumque sit recusandae voluptates voluptatum est perspiciatis autem inventore
+                rerum temporibus, illo voluptatibus eveniet nobis minus modi cum, similique laboriosam.</p>
+
+            <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum cumque sit recusandae
+                voluptates voluptatum est perspiciatis autem inventore rerum temporibus, illo voluptatibus eveniet nobis
+                minus modi cum, similique laboriosam.</p>
+
+        </div>
+
+        <div class="footer">
+            <p class="copy">Copyright 2019. MuktiDJ </p>
+        </div>
+    </div>
+</body>
+
+</html>

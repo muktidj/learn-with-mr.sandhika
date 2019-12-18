@@ -1,0 +1,19 @@
+1.Overlapping Margin 
+bakal terjadi jika elemen yang dibuat secara Horizonta
+atau Vertikal. Perbedaanya jika Horizontal dia akan menambahkan kedua margin.
+Tapi Kalo yang vertikal dia akan menggunakan margin yang terbesar untuk 
+dijadikan Margin berlaku untuk display block. Berlaku untuk display inline atau inline block 
+yang vertikal.
+
+2. Negative Margin
+akan berlawanan arah. jika menambahkan pada display blok overlaping margin
+tidak berlaku
+
+3. Auto 
+untuk margin kiri dan kanan
+
+4. Shorthand 
+Margin: 50 -> Menambahkan atas bawah kiri kanan 50px
+Margin: 50px auto -> 50px atas-bawah, auto kiri-kanan
+margin: 10px 20px 30px 40px -> 10px atas (dibaca searah jarum jam)
+

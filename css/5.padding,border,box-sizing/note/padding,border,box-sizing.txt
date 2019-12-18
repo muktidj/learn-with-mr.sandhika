@@ -1,0 +1,18 @@
+1. Padding
+Penulisan Shorthand padding sama kaya margin, perbedaanya adalah
+-Padding tidak bisa diberi nilai negatif
+-Padding tidak memiliki nilai auto
+-Padding mempengaruhi ukuran box yang dibuat misal width dan height sudah di
+atur itu bisa bertambah karena dikasih padding
+
+2.Border
+border: width style color -> border: 5px solid red;
+
+-Penulisannya css nya sama kaya Margin dan padding
+-Border juga menambha ukuran elemen sama kaya padding kasusnya
+
+
+3. box-sizing 
+properti ini berfungsi agar kita tidak perlu mengkalkulasikan padding,border 
+yang kita tambahkan agar tidak merubah ukuran width dan height yang sudah
+kita atur sebelumnya

@@ -1,0 +1,10 @@
+Banyak Elemen HTML Semuanya memiliki margin, padding default.
+Knp harus melakukan reset ? agar kita mempunya kendali penuh untuk cssnya.
+ada bbrp cara melakukan reset. menggunakan selector universal 
+* {
+margin: 0
+padding : 0
+}
+
+tapi ada yg bilang menggunakan selector universal jadi berat, cara yang palung efektif menggunakan teknik reset oleh erik meyer. tinggal tulis
+digoogle menggunakan key css erik mayer reser.
