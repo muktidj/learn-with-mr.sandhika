@@ -19,45 +19,45 @@
 // console.log(mahasiswa2);
 
 // function declaration yang lebih efektif
-const methodMahasiswa = {
-  addEnergi:function(makan) {
-    this.energi += makan;
+// const methodMahasiswa = {
+//   addEnergi:function(makan) {
+//     this.energi += makan;
 
-    console.log(`hello ${this.nama}, Jaga Kesehatan`);
+//     console.log(`hello ${this.nama}, Jaga Kesehatan`);
 
-  },
+//   },
 
-  minusEnergi:function(jam) {
-    this.energi -= jam;
-    console.log(`hello ${this.nama}, Main Terus`) ;
+//   minusEnergi:function(jam) {
+//     this.energi -= jam;
+//     console.log(`hello ${this.nama}, Main Terus`) ;
 
-  },
+//   },
 
-  doubleEnergi:function(jam) {
-    this.energi += jam * 2;
-    console.log(`hello ${this.nama}, Tidur Terus`);
+//   doubleEnergi:function(jam) {
+//     this.energi += jam * 2;
+//     console.log(`hello ${this.nama}, Tidur Terus`);
 
-  }
-}
+//   }
+// }
 
-function Mahasiswa(nama, energi) {
-  let mahasiswa = Object.create(methodMahasiswa);
-  mahasiswa.nama = nama;
-  mahasiswa.energi = energi;
+// function Mahasiswa(nama, energi) {
+//   let mahasiswa = Object.create(methodMahasiswa);
+//   mahasiswa.nama = nama;
+//   mahasiswa.energi = energi;
 
-  return mahasiswa;
+//   return mahasiswa;
 
 
-}
+// }
 
-let ghost = Mahasiswa("Ghost", 10);
-console.log(ghost.doubleEnergi(5));
-console.log(ghost);
+// let ghost = Mahasiswa("Ghost", 10);
+// console.log(ghost.doubleEnergi(5));
+// console.log(ghost);
 
-console.log(ghost.minusEnergi(10));
-console.log(ghost);
-console.log(ghost.addEnergi(10));
-console.log(ghost);
+// console.log(ghost.minusEnergi(10));
+// console.log(ghost);
+// console.log(ghost.addEnergi(10));
+// console.log(ghost);
 
 
 
@@ -84,3 +84,28 @@ console.log(ghost);
 // console.log(mukti.addEnergi(10));
 // console.log(mukti.minusEnergi(5));
 // console.log(mukti);
+
+
+// Prototype
+function Mahasiswa(nama, energi) {
+  this.nama = nama;
+  this.energi = energi
+}
+
+Mahasiswa.prototype.makan = function(porsi) {
+  this.energi += porsi
+  return `Halo ${this.nama}, Selamat Makan`
+}
+
+Mahasiswa.prototype.main = function(jam) {
+  this.energi -= jam
+  return `Halo ${this.nama}, Jangan Main Terus`
+}
+
+Mahasiswa.prototype.tidur = function(jam) {
+  this.energi += jam * 2
+  return `Halo ${this.nama}, Selamat Tidur`
+}
+
+
+let Mukti = new Mahasiswa('Mukti', 10)
