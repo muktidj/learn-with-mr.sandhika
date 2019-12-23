@@ -1,142 +1,82 @@
-//Object Literal
-// const mahasiswa1 = {
-//   nama: "Mukti DJ",
-//   energi: 100,
-//   useEnergi(makan) {
-//     this.energi += makan;
-//     return `hello ${this.nama}, Jaga Kesehatan`;
-//   },
-// };
-// const mahasiswa2 = {
-//   nama: "Ayu Retno",
-//   energi: 100,
-//   useEnergi(makan) {
-//     this.energi += makan;
-//     return `hello ${this.nama}, Jaga Kesehatan`;
-//   },
-// };
-// console.log(mahasiswa2.useEnergi(10));
-// console.log(mahasiswa2);
+/*2 Fase pada Execution Context
+1. Creation
+2.Execution
 
-// function declaration yang lebih efektif
-// const methodMahasiswa = {
-//   addEnergi:function(makan) {
-//     this.energi += makan;
+2.1 Execution Context, Hoisting && Scope
+*/
 
-//     console.log(`hello ${this.nama}, Jaga Kesehatan`);
+// console.log(nama);
+// var nama = "Mukti";
 
-//   },
+// Creation Phase pada Global Context
+// Nyari apakah ada keyword variabel, kalo ada dia membuat nama variabel di set 'undefined'
+// nama function = fn()
+//hoisitng
+// itu yang terjadi pada Executian Context
 
-//   minusEnergi:function(jam) {
-//     this.energi -= jam;
-//     console.log(`hello ${this.nama}, Main Terus`) ;
+// Exucution Phase
 
-//   },
+//  var nama = 'Mukti'
+//  var age = 21
 
-//   doubleEnergi:function(jam) {
-//     this.energi += jam * 2;
-//     console.log(`hello ${this.nama}, Tidur Terus`);
+//  console.log(sayHello());
 
+//  function sayHello() {
+//   return `WOI ${nama}, umur saya ${age}`
+//  }
+
+
+// function membuat local execution context
+// yg didalamnya terdapat creation dan execution window
+//arguments
+//hoisting
+
+// Scope
+
+
+// var nama = 'Mukti'
+// var age = 21
+
+// function gabungNama() {
+//   console.log(arguments);
+
+//   let introduce = 'perkenalkan'
+//   return `${introduce}, nama saya ${nama}. Umur saya ${age}`
+// }
+
+// console.log(gabungNama('Ayu Retno'));
+
+
+// function a() {
+//   console.log('Ini A');
+
+//   function b() {
+//     console.log('Ini B');
+
+//     function c() {
+//       console.log('Ini C');
+
+//     }
+//     c()
 //   }
+//   b()
 // }
+// a()
 
-// function Mahasiswa(nama, energi) {
-//   let mahasiswa = Object.create(methodMahasiswa);
-//   mahasiswa.nama = nama;
-//   mahasiswa.energi = energi;
+// Hoisting && Scope
+function satu() {
+  var nama = "ghost"
+  console.log(nama);
 
-//   return mahasiswa;
-
-
-// }
-
-// let ghost = Mahasiswa("Ghost", 10);
-// console.log(ghost.doubleEnergi(5));
-// console.log(ghost);
-
-// console.log(ghost.minusEnergi(10));
-// console.log(ghost);
-// console.log(ghost.addEnergi(10));
-// console.log(ghost);
-
-
-
-
-
-
-
-// Constructrur Function , keyword new
-// function Mahasiswa(nama, energi) {
-//   this.nama = nama;
-//   this.energi = energi;
-//   this.addEnergi = function(makan) {
-//     this.energi += makan;
-//     return `hello ${this.nama}, Jaga Kesehatan`;
-//   };
-
-//   this.minusEnergi = function(jam) {
-//     this.energi -= jam;
-//     return `hello ${this.nama}, Main Terus`;
-//   };
-// }
-
-// let mukti = new Mahasiswa('mukti', 20)
-// console.log(mukti.addEnergi(10));
-// console.log(mukti.minusEnergi(5));
-// console.log(mukti);
-
-
-// Prototype
-// function Mahasiswa(nama, energi) {
-//   this.nama = nama;
-//   this.energi = energi
-// }
-
-// Mahasiswa.prototype.makan = function(porsi) {
-//   this.energi += porsi
-//   return `Halo ${this.nama}, Selamat Makan`
-// }
-
-// Mahasiswa.prototype.main = function(jam) {
-//   this.energi -= jam
-//   return `Halo ${this.nama}, Jangan Main Terus`
-// }
-
-// Mahasiswa.prototype.tidur = function(jam) {
-//   this.energi += jam * 2
-//   return `Halo ${this.nama}, Selamat Tidur`
-// }
-
-
-// let Mukti = new Mahasiswa('Mukti', 10)
-
-
-// Class
-
-class Mahasiswa {
-  constructor(nama, energi) {
-    this.nama = nama
-    this.energi = energi
-  }
-
-  makan(porsi) {
-      this.energi += porsi
-      return `Halo ${this.nama}, Selamat Makan`
-    }
-
-    main(jam) {
-      this.energi -= jam
-      return `Halo ${this.nama}, Jangan Main Terus`
-    }
-
-    tidur(jam) {
-      this.energi += jam * 2
-      return `Halo ${this.nama}, Selamat Tidur`
-    }
 }
 
-let mukti = new Mahasiswa('Mukti', 5)
+function dua() {
+  console.log(nama);
 
+}
 
-let angka = [43,11,40]
-console.log(angka.sort());
+console.log(nama);
+var nama = "Ayu"
+satu()
+dua('dinda')
+console.log(nama);
