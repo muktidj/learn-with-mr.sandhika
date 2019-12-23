@@ -87,25 +87,56 @@
 
 
 // Prototype
-function Mahasiswa(nama, energi) {
-  this.nama = nama;
-  this.energi = energi
+// function Mahasiswa(nama, energi) {
+//   this.nama = nama;
+//   this.energi = energi
+// }
+
+// Mahasiswa.prototype.makan = function(porsi) {
+//   this.energi += porsi
+//   return `Halo ${this.nama}, Selamat Makan`
+// }
+
+// Mahasiswa.prototype.main = function(jam) {
+//   this.energi -= jam
+//   return `Halo ${this.nama}, Jangan Main Terus`
+// }
+
+// Mahasiswa.prototype.tidur = function(jam) {
+//   this.energi += jam * 2
+//   return `Halo ${this.nama}, Selamat Tidur`
+// }
+
+
+// let Mukti = new Mahasiswa('Mukti', 10)
+
+
+// Class
+
+class Mahasiswa {
+  constructor(nama, energi) {
+    this.nama = nama
+    this.energi = energi
+  }
+
+  makan(porsi) {
+      this.energi += porsi
+      return `Halo ${this.nama}, Selamat Makan`
+    }
+
+    main(jam) {
+      this.energi -= jam
+      return `Halo ${this.nama}, Jangan Main Terus`
+    }
+
+    tidur(jam) {
+      this.energi += jam * 2
+      return `Halo ${this.nama}, Selamat Tidur`
+    }
 }
 
-Mahasiswa.prototype.makan = function(porsi) {
-  this.energi += porsi
-  return `Halo ${this.nama}, Selamat Makan`
-}
-
-Mahasiswa.prototype.main = function(jam) {
-  this.energi -= jam
-  return `Halo ${this.nama}, Jangan Main Terus`
-}
-
-Mahasiswa.prototype.tidur = function(jam) {
-  this.energi += jam * 2
-  return `Halo ${this.nama}, Selamat Tidur`
-}
+let mukti = new Mahasiswa('Mukti', 5)
 
 
-let Mukti = new Mahasiswa('Mukti', 10)
+let angka = [43,11,40]
+console.log(angka.sort());
