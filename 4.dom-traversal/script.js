@@ -1,5 +1,5 @@
 const x = document.querySelectorAll(".close");
-const card = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 const nama = document.querySelector('.nama')
 // x.addEventListener("click", () => {
 //   card.style.display = "none";
@@ -25,8 +25,16 @@ x.forEach((el) => {
     el.addEventListener('click', (event) => {
         event.target.parentElement.style.display = 'none'
         event.preventDefault()
+        event.stopPropagation() //berfungsi untuk menghentikan event Bubling
         console.log(event.target);
 
+    })
+})
+
+// Event BUBLING
+cards.forEach((card) => {
+    card.addEventListener('click', (event) => {
+        alert("I'am RUN!")
     })
 })
 
