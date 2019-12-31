@@ -1,6 +1,17 @@
 const x = document.querySelectorAll(".close");
 const cards = document.querySelectorAll(".card");
 const nama = document.querySelector('.nama')
+const container = document.querySelector('.container')
+
+container.addEventListener('click', (event) => {
+    if(event.target.className === 'close') {
+        event.target.parentElement.style.display = 'none'
+        // Memanfaatkan event target sehingga kode lebih efektif
+    }
+    console.log(event.target)
+    event.preventDefault()
+})
+
 // x.addEventListener("click", () => {
 //   card.style.display = "none";
 // });
@@ -21,26 +32,26 @@ Cara 1
 */
 
 //cara 2
-x.forEach((el) => {
-    el.addEventListener('click', (event) => {
-        event.target.parentElement.style.display = 'none'
-        event.preventDefault()
-        event.stopPropagation() //berfungsi untuk menghentikan event Bubling
-        console.log(event.target);
+// x.forEach((el) => {
+//     el.addEventListener('click', (event) => {
+//         event.target.parentElement.style.display = 'none'
+//         event.preventDefault()
+//         event.stopPropagation() //berfungsi untuk menghentikan event Bubling
+//         console.log(event.target);
 
-    })
-})
+//     })
+// })
 
 // Event BUBLING
-cards.forEach((card) => {
-    card.addEventListener('click', (event) => {
-        alert("I'am RUN!")
-    })
-})
+// cards.forEach((card) => {
+//     card.addEventListener('click', (event) => {
+//         alert("I'am RUN!")
+//     })
+// })
 
-console.log(nama);
-console.log(nama.parentElement);
-console.log(nama.parentElement.parentElement);
-console.log(nama.nextElementSibling);
-console.log(nama.nextElementSibling.nextElementSibling);
-console.log(nama.previousElementSibling);
+// console.log(nama);
+// console.log(nama.parentElement);
+// console.log(nama.parentElement.parentElement);
+// console.log(nama.nextElementSibling);
+// console.log(nama.nextElementSibling.nextElementSibling);
+// console.log(nama.previousElementSibling);
