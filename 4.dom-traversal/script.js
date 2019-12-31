@@ -24,6 +24,7 @@ Cara 1
 x.forEach((el) => {
     el.addEventListener('click', (event) => {
         event.target.parentElement.style.display = 'none'
+        event.preventDefault()
         console.log(event.target);
 
     })
