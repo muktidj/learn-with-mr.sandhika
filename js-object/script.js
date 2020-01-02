@@ -1,51 +1,20 @@
-//Closure
-// function init() {
-//   // let nama = 'Mukti'
-//   return function(nama) {
-//     console.log(nama);
+// ArrowFunction
+const tampilNama = nama => {
+  return `hello, ${nama}`;
+};
 
-//   }
+// Implisit Return
+const tampilNama1 = nama => `hello, ${nama}`
+// console.log(tampilNama1("Mukti DJ"));
 
-// }
+// 2 Parameter
+const tampilNama2 = (nama, waktu) => {
+  return `hello, ${nama} Selamat ${waktu}`;
+};
 
-// let panggilNama = init()
-// panggilNama('Ayu')
-// panggilNama('Retno')
+// console.log(tampilNama2('Ayu Retno', 'Malam'))
 
+let child = ['Ibrahim Mukti', 'Sulleyman Mukti', 'Mutia Ayu']
 
-// const ucapkanSalam = (waktu) => {
-//   return (nama) => {
-//     console.log(`Halo ${nama}, good ${waktu}. Have Nice Day`);
-
-//   }
-// }
-
-// const goodMorning = ucapkanSalam('Morning')
-// const goodAfternoon = ucapkanSalam('Afternoon')
-// const goodNight = ucapkanSalam('Night')
-
-// goodMorning('Mukti')
-// goodAfternoon('Dwi')
-// goodNight('Jatmoko')
-
-// console.dir(goodNight())
-
-
-
-let add = (() => {
-  let counter = 0
-  return function() {
-    return ++counter;
-  }
-})();
-
-console.log(add());
-console.log(add());
-console.log(add());
-console.log(add());
-
-// let a = add()
-// console.log(a());
-// console.log(a());
-// console.log(a());
-// console.log(a());
+// console.log(child.map(children => children.length))
+console.table(child.map(children => ({nama: children, longNama : children.length})))
