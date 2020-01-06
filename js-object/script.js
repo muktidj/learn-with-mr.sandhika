@@ -44,11 +44,47 @@
 
 // const mukti = new Mahasiswa()
 
-const box = document.querySelector('.box')
-box.addEventListener('click', function() {
-  this.classList.toggle('size')
-  setTimeout(() => {
-    this.classList.toggle('caption')
-  }, 600);
+// const box = document.querySelector('.box')
+// box.addEventListener('click', function() {
+//   this.classList.toggle('size')
+//   setTimeout(() => {
+//     this.classList.toggle('caption')
+//   }, 600);
 
-})
+// })
+
+// Map, Reduce, filter
+let angka = [-1,2,-2,-3,-4,-5,-6,4,5,7,43]
+// for
+// for (let i = 0; i < angka.length; i++) {
+  //   if(angka[i] >= 3 ) {
+
+    //    newAngka.push(angka[i])
+    //    console.log(angka[i]);
+
+    //   }
+    // }
+    // console.log(newAngka);
+
+    //filter
+    // const newAngka = angka.filter((angkaYgDiFilter) => {
+    //   return angkaYgDiFilter >=3
+    // })
+    // console.log(newAngka);
+
+    // Map
+    // const newAngka = angka.map((angkaYGDikali => angkaYGDikali * 2))
+    // console.log(angka)
+    // console.log(newAngka);
+
+    // reduce
+    // const newAngka = angka.reduce((accumulator, currentValue) => {
+    //   return accumulator + currentValue
+    // })
+    // console.log(newAngka);
+
+    // Method Chaining
+    const hasilSemua = angka.filter(angkaYgDifilter => angkaYgDifilter >=5 )
+    .map(angkaYgDikali => angkaYgDikali * 10)
+    .reduce((acc, cur) => acc + cur)
+    console.log(hasilSemua);
