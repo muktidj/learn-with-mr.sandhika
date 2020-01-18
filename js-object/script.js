@@ -84,11 +84,11 @@ let angka = [-1, 2, -2, -3, -4, -5, -6, 4, 5, 7, 43];
 // console.log(newAngka);
 
 // Method Chaining
-const hasilSemua = angka
-  .filter(angkaYgDifilter => angkaYgDifilter >= 5)
-  .map(angkaYgDikali => angkaYgDikali * 10)
-  .reduce((acc, cur) => acc + cur);
-console.log(hasilSemua);
+// const hasilSemua = angka
+//   .filter(angkaYgDifilter => angkaYgDifilter >= 5)
+//   .map(angkaYgDikali => angkaYgDikali * 10)
+//   .reduce((acc, cur) => acc + cur);
+// console.log(hasilSemua);
 
 // HTML Fragments
 // const mhs = {
@@ -128,25 +128,87 @@ console.log(hasilSemua);
 // </div>`
 
 // HTML Fragments && Nested
-const mahasiswa = {
-  nama : "Mukti",
-  semester : 7,
-  matakul : ['Pemweb', 'Moprog', 'Algorithma', 'Statistik EKonomi']
+// const mahasiswa = {
+//   nama : "Mukti",
+//   semester : 7,
+//   matakul : ['Pemweb', 'Moprog', 'Algorithma', 'Statistik EKonomi']
+// }
+
+// const cetakMatkul = (matakul) => {
+// return (
+//   `<ol>
+//     ${matakul.map(mk => `<li>${mk}</li>`).join('')}
+//   </ol>`
+// )
+// }
+
+// const element = `<div class="mhs">
+//   <h2>${mahasiswa.nama}</h2>
+//   <h3>${mahasiswa.semester}</h3>
+//   <h4>Mata Kuliah:</h4>
+//   ${cetakMatkul(mahasiswa.matakul)}
+// </div>`
+
+// document.body.innerHTML = element
+
+//Tagged Template String
+
+// const nama = "Mukti DJ";
+// const umur = 21;
+
+// const coba = (strings, ...values) => {
+  // let result = ''
+  // strings.forEach((str, i) => {
+  //   result += `${str}${values[i] || ''}`
+  // });
+  // return result
+
+//   return strings.reduce(
+//     (result, str, i) => `${result}${str}
+// <span class='hl'>${values[i] || ""}</span>`,
+//     ""
+//   );
+// };
+
+// const str = coba`Hello, mi chiamo ${nama}, ho ${umur} anni`;
+
+// document.body.innerHTML = str
+
+
+// Destructuring Assigment
+// const perkenalan = ['My', 'name', 'is', 'Mukti']
+
+// const [nol,satu,dua,tiga] = perkenalan
+// console.log(dua);
+
+
+// Swap Items
+// let a = 10
+// let b = 100
+// console.log(a);
+// console.log(b);
+// [a,b] = [b,a]
+// console.log(a);
+// console.log(b);
+
+//Rest Parameter
+// const [c, ...values] = [1,2,3,4,5,6,7,8,9,10]
+// console.log(c);
+// console.log(values);
+
+
+
+const mhs = {
+   nama : 'Mukti',
+   girlfriend : 'Zulfa DInda',
+   wife : 'Ayu Retno'
 }
 
-const cetakMatkul = (matakul) => {
-return (
-  `<ol>
-    ${matakul.map(mk => `<li>${mk}</li>`).join('')}
-  </ol>`
-)
+const {nama, girlfriend, wife, children= 3} = mhs
+console.log(nama);
+console.log(children);
+
+function getMhs(mhs) {
+  return mhs.girlfriend
 }
-
-const element = `<div class="mhs">
-  <h2>${mahasiswa.nama}</h2>
-  <h3>${mahasiswa.semester}</h3>
-  <h4>Mata Kuliah:</h4>
-  ${cetakMatkul(mahasiswa.matakul)}
-</div>`
-
-document.body.innerHTML = element
+console.log(getMhs(mhs));
