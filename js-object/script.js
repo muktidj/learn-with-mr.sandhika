@@ -157,11 +157,11 @@ let angka = [-1, 2, -2, -3, -4, -5, -6, 4, 5, 7, 43];
 // const umur = 21;
 
 // const coba = (strings, ...values) => {
-  // let result = ''
-  // strings.forEach((str, i) => {
-  //   result += `${str}${values[i] || ''}`
-  // });
-  // return result
+// let result = ''
+// strings.forEach((str, i) => {
+//   result += `${str}${values[i] || ''}`
+// });
+// return result
 
 //   return strings.reduce(
 //     (result, str, i) => `${result}${str}
@@ -174,13 +174,11 @@ let angka = [-1, 2, -2, -3, -4, -5, -6, 4, 5, 7, 43];
 
 // document.body.innerHTML = str
 
-
 // Destructuring Assigment
 // const perkenalan = ['My', 'name', 'is', 'Mukti']
 
 // const [nol,satu,dua,tiga] = perkenalan
 // console.log(dua);
-
 
 // Swap Items
 // let a = 10
@@ -196,8 +194,7 @@ let angka = [-1, 2, -2, -3, -4, -5, -6, 4, 5, 7, 43];
 // console.log(c);
 // console.log(values);
 
-
-
+/*
 const mhs = {
    nama : 'Mukti',
    girlfriend : 'Zulfa DInda',
@@ -212,3 +209,50 @@ function getMhs(mhs) {
   return mhs.girlfriend
 }
 console.log(getMhs(mhs));
+*/
+
+// Destructuring Function return value
+
+// const jumKali = (a, b) => {
+//   return [a + b, a * b];
+// };
+
+// const [jumlah, kali] = jumKali(10,50)
+// console.log(jumKali(10,50));
+
+// console.log(jumlah);
+// console.log(kali);
+
+/*
+const kalkulasi = (m,n) => {
+  return {
+    tambah : m + n,
+    kurang : m - n,
+    kali  : m * n,
+    bagi : m / n
+  }
+}
+
+const { kurang, bagi, kali, tambah} = kalkulasi(100,20)
+console.log(kurang);
+console.log(bagi);
+*/
+
+// Destructuring Arguments
+const myNameIs = {
+  nama : 'Ayu Retno Mukti',
+  husband : 'Mukti DJ',
+  children : 3,
+  childrenName : {
+    child1 : 'Ibarhim mukti',
+    child2 : 'Sulleyman mukti',
+    child3 : 'Mutiaayu lestari'
+
+  }
+}
+
+const cetakMyNameIs = ({nama, husband, children, childrenName : {child1, child2, child3}}) => {
+  return `Hay, my name is ${nama}, my husband is ${husband} and we have ${children} children. First Child name is ${child1}`
+}
+
+console.log(cetakMyNameIs(myNameIs));
