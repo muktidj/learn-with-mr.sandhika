@@ -7,13 +7,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        /* .hl {
+            background: linear-gradient(red,yellow,green);
+        }
+        body {
+            font-size: 20px;
+            text-align: center;
+        } */
+        body {
+            background-color: #ccc;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 36px;
+            text-align: center;
+            color: red;
+            text-shadow: 3px 2px 3px black;
+        }
+
+        .person span {
+            transition: .3s;
+            line-height: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .person span:hover {
+            transform: scale(2) translateY(-10px);
+            color: teal;
+        }
+
+        .nama {
+            display: none;
+        }
+
 
     </style>
 </head>
 
 <body>
-    
-    <script src="script.js"></script>
+    <ul>
+        <li class="nama">Ayu Retno</li>
+        <li class="nama">Sabila Istifiany</li>
+        <li class="nama">Zulfa Dinda</li>
+        <li class="nama">Putri fia</li>
+    </ul>
+
+    <h1 class="person">Mukti</h1>
+
+    <script src="spreadOperator.js"></script>
 </body>
 
 </html>
