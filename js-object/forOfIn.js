@@ -34,7 +34,7 @@ for (const [index, names] of nama.entries()) {
 */
 
 // Nodelist
-const liNama = document.querySelectorAll('.nama')
+//const liNama = document.querySelectorAll('.nama')
 // liNama.forEach(nama => {
 //    console.log(nama.innerHTML)
 // })
